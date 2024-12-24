@@ -1,0 +1,71 @@
+body {
+    background-color: #DBAF90 !important;
+    margin: 0;
+    display: flex;
+  
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+  
+    /* This centers our sketch vertically. */
+    align-items: center;
+  
+}
+
+.container {
+	width: 1000px;
+	margin: 50px auto 100px;
+
+}
+
+.info-banner{
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+    justify-content: center;
+      -webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	margin-bottom: 60px;
+}
+#title {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+    color: #E25065;
+    position: relative;
+    top:-20px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+ }
+
+ 
+input[type=range]::-webkit-slider-thumb{
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod !important;
+ }
+ 
+.about{
+    width: 50%;
+	text-align: right;
+    top: 200px;
+}
+
+.description{
+	font-weight: 300;
+	font-size: 14px;
+    color:white;
+	line-height: 1.6em;
+}
+
