@@ -8,7 +8,7 @@ function preload() {
   setInterval(draw, 30);
 }
 function setup() {
-    var canvas = createCanvas(width, height);
+    var canvas = createCanvas(windowWidth/1.5, windowHeight/1.5);
     // var slider = createSlider(0, 1, 0, 0.1);
 
     canvas.parent('sketch-holder');
