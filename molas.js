@@ -4,11 +4,10 @@ let spacing = 20;
 let width = 500;
 let height = 500;
 
-function preload() {
-  setInterval(draw, 30);
-}
 function setup() {
-    var canvas = createCanvas(windowWidth/1.5, windowHeight/1.5);
+  let canvasWidth = windowWidth < 767? windowWidth: windowWidth/1.5; 
+  var canvas = createCanvas(canvasWidth, windowHeight);
+
     // var slider = createSlider(0, 1, 0, 0.1);
 
     canvas.parent('sketch-holder');
@@ -20,6 +19,8 @@ function setup() {
     // TODO: Add slider to change randomization
     // TODO: Add dark mode button
     // slider.size(200);
+
+    setInterval(draw, 30);
 }
 
 function draw() {
@@ -34,10 +35,20 @@ function draw() {
     line(x, y+spacing, x +spacing, y);
   }
   x = x + spacing;
-  if (x > width){
+  let canvasWidth = windowWidth < 767? windowWidth: windowWidth/1.5; 
+
+  
+  if (x > canvasWidth){
     x = 0;
     y = y + spacing;
   }
+}
+
+function windowResized() {
+  let canvasWidth = windowWidth < 767? windowWidth: windowWidth/1.5; 
+  resizeCanvas(canvasWidth, windowHeight);
+  x=0;
+  y=0;
 }
 
 
